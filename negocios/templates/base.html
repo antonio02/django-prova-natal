@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+</head>
+<body>
+<nav style="display:flex; flex-direction:row; justify-content: space-around; background-color: lightgray; padding: 1em;">
+    <a href="{% url 'empresas' %}">Empresas</a>
+    <a href="{% url 'acoes' %}">Ações</a>
+    <a href="{% url 'cotacoes' %}">Cotações</a>
+</nav>
+{% block body %}
+
+{% endblock %}
+
+</body>
+</html>

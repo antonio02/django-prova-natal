@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<ul>
+{% for acao in acoes %}
+    <li><h3>{{acao.sigla}}</h3>
+    {% for cotacao in acao.cotacoes.all %}
+    <p> R$: {{cotacao.valor}} // Data da cotacao: {{cotacao.data|date:'d-M-Y H:i'}}</p>
+        </li>
+    {% endfor %}
+{% endfor %}
+</ul>
+
+<a href="{% url 'cotacoes_add' %}"><button>Nova cotação</button></a>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<ul>
+{% for acao in acoes %}
+    <li><h3>{{acao.sigla}}</h3> <p>{{acao.empresa.nome}} // {{acao.data_inicio|date:'d-M-Y H:i'}}</p></li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'acoes_add' %}"><button>Nova ação</button></a>
+
+{% endblock %}
